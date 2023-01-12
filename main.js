@@ -358,94 +358,190 @@ var starshot = 2252;
 var voyager2 = 2414;
 
 function update(){
-    var time = video.currentTime;
-    if(key1Btn.textContent != ""){
-        key1Btn.style.display = "inline";
-    }
-    if(key2Btn.textContent != ""){
-        key2Btn.style.display = "inline";
-    }
-    if(key3Btn.textContent != ""){
-        key3Btn.style.display = "inline";
-    }
-    if(time >= voyager && time < blackHole){
-        key1Btn.textContent = "Voyager I";
-    }
-    else if(time >= blackHole && time < einstein){
-        key2Btn.textContent = "Black Hole";
-    }
-    else if(time >= einstein && time < gWaves){
-        key3Btn.textContent = "Albert Einstein";
-    }
-    else if(time >= gWaves && time < eSpectrum){
-        key1Btn.textContent = "Gravitational Waves";
-    }
-    else if(time >= eSpectrum && time < dna){
-        key2Btn.textContent = "Electromagnetic Spectrum";
-    }
-    else if(time >= dna && time < bigBang){
-        key3Btn.textContent = "DNA";
-    }
-    else if(time >= bigBang && time < naturalSelection){
-        key1Btn.textContent = "Big Bang";
-    }
-    else if(time >= naturalSelection && time < neoCortex){
-        key2Btn.textContent = "Natural Selection";
-    }
-    else if(time >= neoCortex && time < triassic){
-        key3Btn.textContent = "NeoCortex";
-    }
-    else if(time >= triassic && time < homoSapiens){
-        key1Btn.textContent = "Triassic";
-    }
-    else if(time >= homoSapiens && time < blombos){
-        key2Btn.textContent = "Homo Sapiens";
-    }
-    else if(time >= blombos && time < catalhoyuk){
-        key3Btn.textContent = "Blombos Cave";
-    }
-    else if(time >= catalhoyuk && time < protoCity){
-        key1Btn.textContent = "Çatalhöyük";
-    }
-    else if(time >= protoCity && time < ocher){
-        key2Btn.textContent = "Proto-city";
-    }
-    else if(time >= ocher && time < giordano){
-        key3Btn.textContent = "Ocher";
-    }
-    else if(time >= giordano && time < textile){
-        key1Btn.textContent = "Giordano Bruno";
-    }
-    else if(time >= textile && time < christian){
-        key2Btn.textContent = "Textile Merchant Lens";
-    }
-    else if(time >= christian && time < antony){
-        key3Btn.textContent = "Christiaan Huygens";
-    }
-    else if(time >= antony && time < baruch){
-        key1Btn.textContent = "Antony van Leeuwenhoek";
-    }
-    else if(time >= baruch && time < einstein2){
-        key2Btn.textContent = "Baruch Spinoza";
-    }
-    else if(time >= einstein2 && time < bio){
-        key3Btn.textContent = "Albert Einstein";
-    }
-    else if(time >= bio && time < endagered){
-        key1Btn.textContent = "Biodiversity";
-    }
-    else if(time >= endagered && time < anthropocene){
-        key2Btn.textContent = "Endangered Species";
-    }
-    else if(time >= anthropocene && time < starshot){
-        key3Btn.textContent = "Anthropocene";
-    }
-    else if(time >= starshot && time < voyager2){
-        key1Btn.textContent = "Project Breakthrough Starshot";
-    }
-    else if(time >= voyager2){
-        key2Btn.textContent = "Voyager I";
-    }
+
+	var fileName = location.href.split("/").slice(-1)
+
+	if(fileName == "index.html"){
+		var time = video.currentTime;
+
+	    if(key1Btn.textContent != ""){
+	        key1Btn.style.display = "inline";
+	    }
+	    if(key2Btn.textContent != ""){
+	        key2Btn.style.display = "inline";
+	    }
+	    if(key3Btn.textContent != ""){
+	        key3Btn.style.display = "inline";
+	    }
+	    if(time >= voyager && time < blackHole){
+	        key1Btn.textContent = "Voyager I";
+	    }
+	    else if(time >= blackHole && time < einstein){
+	        key2Btn.textContent = "Black Hole";
+	    }
+	    else if(time >= einstein && time < gWaves){
+	        key3Btn.textContent = "Albert Einstein";
+	    }
+	    else if(time >= gWaves && time < eSpectrum){
+	        key1Btn.textContent = "Gravitational Waves";
+	    }
+	    else if(time >= eSpectrum && time < dna){
+	        key2Btn.textContent = "Electromagnetic Spectrum";
+	    }
+	    else if(time >= dna && time < bigBang){
+	        key3Btn.textContent = "DNA";
+	    }
+	    else if(time >= bigBang && time < naturalSelection){
+	        key1Btn.textContent = "Big Bang";
+	    }
+	    else if(time >= naturalSelection && time < neoCortex){
+	        key2Btn.textContent = "Natural Selection";
+	    }
+	    else if(time >= neoCortex && time < triassic){
+	        key3Btn.textContent = "NeoCortex";
+	    }
+	    else if(time >= triassic && time < homoSapiens){
+	        key1Btn.textContent = "Triassic";
+	    }
+	    else if(time >= homoSapiens && time < blombos){
+	        key2Btn.textContent = "Homo Sapiens";
+	    }
+	    else if(time >= blombos && time < catalhoyuk){
+	        key3Btn.textContent = "Blombos Cave";
+	    }
+	    else if(time >= catalhoyuk && time < protoCity){
+	        key1Btn.textContent = "Çatalhöyük";
+	    }
+	    else if(time >= protoCity && time < ocher){
+	        key2Btn.textContent = "Proto-city";
+	    }
+	    else if(time >= ocher && time < giordano){
+	        key3Btn.textContent = "Ocher";
+	    }
+	    else if(time >= giordano && time < textile){
+	        key1Btn.textContent = "Giordano Bruno";
+	    }
+	    else if(time >= textile && time < christian){
+	        key2Btn.textContent = "Textile Merchant Lens";
+	    }
+	    else if(time >= christian && time < antony){
+	        key3Btn.textContent = "Christiaan Huygens";
+	    }
+	    else if(time >= antony && time < baruch){
+	        key1Btn.textContent = "Antony van Leeuwenhoek";
+	    }
+	    else if(time >= baruch && time < einstein2){
+	        key2Btn.textContent = "Baruch Spinoza";
+	    }
+	    else if(time >= einstein2 && time < bio){
+	        key3Btn.textContent = "Albert Einstein";
+	    }
+	    else if(time >= bio && time < endagered){
+	        key1Btn.textContent = "Biodiversity";
+	    }
+	    else if(time >= endagered && time < anthropocene){
+	        key2Btn.textContent = "Endangered Species";
+	    }
+	    else if(time >= anthropocene && time < starshot){
+	        key3Btn.textContent = "Anthropocene";
+	    }
+	    else if(time >= starshot && time < voyager2){
+	        key1Btn.textContent = "Project Breakthrough Starshot";
+	    }
+	    else if(time >= voyager2){
+	        key2Btn.textContent = "Voyager I";
+	    }
+	}
+	else{
+		var time = video.currentTime;
+	    if(key1Btn.textContent != ""){
+	        key1Btn.style.display = "inline";
+	    }
+	    if(key2Btn.textContent != ""){
+	        key2Btn.style.display = "inline";
+	    }
+	    if(key3Btn.textContent != ""){
+	        key3Btn.style.display = "inline";
+	    }
+	    if(time >= voyager && time < blackHole){
+	        key1Btn.textContent = "Voyager I";
+	    }
+	    else if(time >= blackHole && time < einstein){
+	        key2Btn.textContent = "Buraco Negro";
+	    }
+	    else if(time >= einstein && time < gWaves){
+	        key3Btn.textContent = "Albert Einstein";
+	    }
+	    else if(time >= gWaves && time < eSpectrum){
+	        key1Btn.textContent = "Ondas Gravitacionais";
+	    }
+	    else if(time >= eSpectrum && time < dna){
+	        key2Btn.textContent = "Espectro Eletromagnético";
+	    }
+	    else if(time >= dna && time < bigBang){
+	        key3Btn.textContent = "DNA";
+	    }
+	    else if(time >= bigBang && time < naturalSelection){
+	        key1Btn.textContent = "Big Bang";
+	    }
+	    else if(time >= naturalSelection && time < neoCortex){
+	        key2Btn.textContent = "Seleção Natural";
+	    }
+	    else if(time >= neoCortex && time < triassic){
+	        key3Btn.textContent = "NeoCortex";
+	    }
+	    else if(time >= triassic && time < homoSapiens){
+	        key1Btn.textContent = "Triássico";
+	    }
+	    else if(time >= homoSapiens && time < blombos){
+	        key2Btn.textContent = "Homo Sapiens";
+	    }
+	    else if(time >= blombos && time < catalhoyuk){
+	        key3Btn.textContent = "Caverna de Blombos";
+	    }
+	    else if(time >= catalhoyuk && time < protoCity){
+	        key1Btn.textContent = "Çatalhöyük";
+	    }
+	    else if(time >= protoCity && time < ocher){
+	        key2Btn.textContent = "Proto-cidade";
+	    }
+	    else if(time >= ocher && time < giordano){
+	        key3Btn.textContent = "Ocre";
+	    }
+	    else if(time >= giordano && time < textile){
+	        key1Btn.textContent = "Giordano Bruno";
+	    }
+	    else if(time >= textile && time < christian){
+	        key2Btn.textContent = "Textile Merchant Lens";
+	    }
+	    else if(time >= christian && time < antony){
+	        key3Btn.textContent = "Christiaan Huygens";
+	    }
+	    else if(time >= antony && time < baruch){
+	        key1Btn.textContent = "Antony van Leeuwenhoek";
+	    }
+	    else if(time >= baruch && time < einstein2){
+	        key2Btn.textContent = "Baruch Spinoza";
+	    }
+	    else if(time >= einstein2 && time < bio){
+	        key3Btn.textContent = "Albert Einstein";
+	    }
+	    else if(time >= bio && time < endagered){
+	        key1Btn.textContent = "Biodiversidade";
+	    }
+	    else if(time >= endagered && time < anthropocene){
+	        key2Btn.textContent = "Espécies em Perigo";
+	    }
+	    else if(time >= anthropocene && time < starshot){
+	        key3Btn.textContent = "Antropoceno";
+	    }
+	    else if(time >= starshot && time < voyager2){
+	        key1Btn.textContent = "Projeto Breakthrough Starshot";
+	    }
+	    else if(time >= voyager2){
+	        key2Btn.textContent = "Voyager I";
+	    }
+	}
 }
 
 var prevvid = document.getElementById("prevvid");
@@ -1124,13 +1220,13 @@ key1Btn.addEventListener("click", function() {
         if(key1Btn.textContent == "Voyager I"){
             info_text1.style.display = "block";
         }
-        else if(key1Btn.textContent == "Gravitational Waves"){
+        else if(key1Btn.textContent == "Gravitational Waves" || key1Btn.textContent == "Ondas Gravitacionais"){
             info_text4.style.display = "block";
         }
         else if(key1Btn.textContent == "Big Bang"){
             info_text6.style.display = "block";
         }
-        else if(key1Btn.textContent == "Triassic"){
+        else if(key1Btn.textContent == "Triassic" || key1Btn.textContent == "Triássico"){
             info_text10.style.display = "block";
         }
         else if(key1Btn.textContent == "Çatalhöyük"){
@@ -1142,10 +1238,10 @@ key1Btn.addEventListener("click", function() {
         else if(key1Btn.textContent == "Antony van Leeuwenhoek"){
             info_text19.style.display = "block";
         }
-        else if(key1Btn.textContent == "Biodiversity"){
+        else if(key1Btn.textContent == "Biodiversity" || key1Btn.textContent == "Biodiversidade"){
             info_text21.style.display = "block";
         }
-        else if(key1Btn.textContent == "Project Breakthrough Starshot"){
+        else if(key1Btn.textContent == "Project Breakthrough Starshot" || key1Btn.textContent == "Projeto Breakthrough Starshot"){
             info_text24.style.display = "block";
         }
     }
@@ -1178,19 +1274,19 @@ key2Btn.addEventListener("click", function() {
         if(key2Btn.textContent == "Voyager I"){
             info_text1.style.display = "block";
         }
-        else if(key2Btn.textContent == "Black Hole"){
+        else if(key2Btn.textContent == "Black Hole" || key2Btn.textContent == "Buraco Negro"){
             info_text2.style.display = "block";
         }
-        else if(key2Btn.textContent == "Electromagnetic Spectrum"){
+        else if(key2Btn.textContent == "Electromagnetic Spectrum" || key2Btn.textContent == "Espectro Eletromagnético"){
             info_text5.style.display = "block";
         }
-        else if(key2Btn.textContent == "Natural Selection"){
+        else if(key2Btn.textContent == "Natural Selection" || key2Btn.textContent == "Seleção Natural"){
             info_text8.style.display = "block";
         }
         else if(key2Btn.textContent == "Homo Sapiens"){
             info_text11.style.display = "block";
         }
-        else if(key2Btn.textContent == "Proto-city"){
+        else if(key2Btn.textContent == "Proto-city" || key2Btn.textContent == "Proto-cidade"){
             info_text14.style.display = "block";
         }
         else if(key2Btn.textContent == "Textile Merchant Lens"){
@@ -1199,7 +1295,7 @@ key2Btn.addEventListener("click", function() {
         else if(key2Btn.textContent == "Baruch Spinoza"){
             info_text20.style.display = "block";
         }
-        else if(key2Btn.textContent == "Endangered Species"){
+        else if(key2Btn.textContent == "Endangered Species" || key2Btn.textContent == "Espécies em Perigo"){
             info_text22.style.display = "block";
         }
     }
@@ -1238,16 +1334,16 @@ key3Btn.addEventListener("click", function() {
         else if(key3Btn.textContent == "NeoCortex"){
             info_text9.style.display = "block";
         }
-        else if(key3Btn.textContent == "Blombos Cave"){
+        else if(key3Btn.textContent == "Blombos Cave" || key3Btn.textContent == "Caverna de Blombos"){
             info_text12.style.display = "block";
         }
-        else if(key3Btn.textContent == "Ocher"){
+        else if(key3Btn.textContent == "Ocher" || key3Btn.textContent == "Ocre"){
             info_text15.style.display = "block";
         }
         else if(key3Btn.textContent == "Christiaan Huygens"){
             info_text17.style.display = "block";
         }
-        else if(key3Btn.textContent == "Anthropocene"){
+        else if(key3Btn.textContent == "Anthropocene" || key3Btn.textContent == "Antropoceno"){
             info_text23.style.display = "block";
         }
     }
