@@ -357,11 +357,10 @@ var anthropocene = 2140;
 var starshot = 2252;
 var voyager2 = 2414;
 
-function update(){
+var language = document.getElementById("lingua");
 
-	var fileName = location.href.split("/").slice(-1)
-	console.log(fileName);
-	if(fileName == "index.html"){
+function update(){
+	if(language.innerText === "EN"){
 		var time = video.currentTime;
 
 	    if(key1Btn.textContent != ""){
