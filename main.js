@@ -360,7 +360,7 @@ var voyager2 = 2414;
 function update(){
 
 	var fileName = location.href.split("/").slice(-1)
-
+	console.log(fileName);
 	if(fileName == "index.html"){
 		var time = video.currentTime;
 
