@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html id="main" style="scroll-behavior: smooth">
+    <head>
+        <title>Cosmos - Projeto Multimédia</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+            if(history.scrollRestoration){
+                history.scrollRestoration = 'manual';
+            }
+            else{
+                window.onbeforeunload = function () {
+                    window.scrollTo(0, 0);
+                }
+            }
+        </script>
+
+        <link rel="icon" href="video_photos/meteor-solid.svg">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="gooey">
+                    <!-- in="sourceGraphic" -->
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                    <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                </filter>
+            </defs>
+        </svg>
+    </head>
+    <body>
+        <div id="Settings">
+            <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+              </div>
+
+            <div class="Scontainer">
+                <h1>Settings</h1> 
+            </div>
+
+            <div id="Down" class="down">
+                <button id="btnDown" class="btn">
+                    <img src="video_photos/down.svg"> </img>
+                </button>
+                
+            </div>
+
+            <div class="Settings_Container">
+                <div class="SLetterType">
+                    <h2>Font Type</h2>
+                    <div class="SLetterTypeBtn">
+                        <button class="bn54" id="timesnewroman">
+                            <span class="bn54span">Times New Roman</span>
+                          </button>
+                          <button class="bn54" id="couriernew">
+                            <span class="bn54span">Courier New</span>
+                          </button>
+                    </div>
+                </div>
+    
+                <div class="SLetterSize"> 
+                    
+                    <h2>Site Colour</h2> 
+                    <div class="SLetterSizeBtn">   
+                        <button class="bn54" id="pink">
+                            <span class="bn54span">Pink</span>
+                          </button>
+                          <button class="bn54" id="turquoise">
+                            <span class="bn54span">Turquoise</span>
+                          </button>          
+                    </div>
+
+                </div>
+    
+                <div class="SColors">
+                    <h2>Menu Background</h2>
+                    <div class="SColorsImg">
+                        <img src="video_photos/cosmos2.jpg">
+                         
+                        <img src="video_photos/pexels-pixabay-2150.jpg">
+
+                    </div>
+                    <div class="SColorsBtn">   
+                    
+                        <button class="bn54" id="img1">
+                            <span class="bn54span">Style 1</span>
+                        </button> 
+                        <button class="bn54" id="img2">
+                            <span class="bn54span">Style 2</span>
+                            </button> 
+                        </div>
+
+                </div>
+    
+              
+            </div>
+
+
+        </div>
+        <div id="Menu">
+            <div id="Titles">
+                <h1>Possible Worlds</h1>
+                <h2>A journey through life</h2>
+            </div>
+           <div id="Buttons">
+                <button class="button" type="button" onClick="toggle();">
+                    <span class="bubbles">
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                    </span>
+                    Trailer
+                </button>
+                
+                <button class="button" id="init" type="button">
+                    <span class="bubbles">
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                    </span>
+                    Video</button>
+                <button class="button" type="button" id="settingsBtn">
+                    <span class="bubbles">
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                    </span>
+                    Settings</button>
+           </div> 
+           <div id="language">
+                <div class="dropdown">
+                    <button class="dropbtn">EN
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="Main_pt.html">Português</a>
+                    </div>
+                </div>
+            </div>
+           <div class="trailer">
+                <video id="vidTrailer" src="video_photos/2021-MM04_Trailer.mp4" controls="true"></video>
+                <img src="video_photos/close.svg" class="close" id="closeTrailer">
+            </div> 
+
+            <script type="text/javascript">
+                function toggle(){
+                    var trailer = document.querySelector(".trailer");
+                    trailer.classList.toggle("active")
+                }
+            </script>       
+            
+            <p>Multimedia 2020/2021 – Project</p>
+        </div>
+
+        <div id="Container">
+            
+            <div id="top_vid">
+                <div id="Up"  class="down">
+                    <button id="btnUp" class="btns">
+                        <img src="video_photos/up.svg"> </img>
+                    </button>                    
+                </div>
+                
+                <div class="button_palavras">
+                    <button id="key1Btn" class="bn13" style="display: none"></button>
+                    <button id="key2Btn" class="bn13" style="display: none"></button>
+                    <button id="key3Btn" class="bn13" style="display: none"></button>
+                </div>
+            </div>
+            
+            <div id="Video">
+                <video id="vid" controls preload="metadata">
+                    <source src="video_photos/Cosmos Possible Worlds.mp4" type="video/mp4">
+                    <track src="subtitles/engsubs.vtt"
+                        kind="captions"                
+                        label="English" 
+                        srclang="en"  
+                        default>
+                    <track src="subtitles/ptsubs.vtt"
+                        kind="captions"                
+                        label="Português" 
+                        srclang="pt"  
+                        default>
+                </video>
+            </div>
+
+            <div class="header">
+                <button class="btn" id="chaptersBtn">Chapters</button>
+                <button class="btn" id="wordBtn" onClick="jQuery(this).toggleClass('active')">Key Words</button>
+                <button class="btn" id="infoBtn">Info</button>                      
+                <button class="btn" id="bookBtn">Book</button>
+            </div>
+
+            <div id="SideBar">               
+                
+                <div id="Capitulos">
+                    <div class="default_display" id="default_display" style="display: none">
+                        <div class="Capitulo_Ant">
+                            <div class="wrapper">
+                                <input class = "checkbox" type="checkbox" id="prev">
+                                <div class="video">
+                                  <video id="prevvid" src="video_photos/c1.mp4"loop muted autoplay></video>
+                                </div>
+                                <div class="text">
+                                  <span data-text="Previous Chapter"></span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="Subapitulo_Ant">
+                            <div class="wrapper">
+                                <input class = "checkbox" type="checkbox" id="subprev">
+                                <div class="video">
+                                  <video id="subprevvid" src="video_photos/c1.mp4" loop muted autoplay></video>
+                                </div>
+                                <div class="text">
+                                  <span data-text="Previous Subchapter"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                        <div class="Capitulo_Seg">
+                            <div class="wrapper">
+                                <input class = "checkbox" type="checkbox" id="next">
+                                <div class="video">
+                                  <video id="nextvid" src="video_photos/c2.mp4" loop muted autoplay></video>
+                                </div>
+                                <div class="text">
+                                  <span data-text="
+                                  Next Chapter"></span>
+                                </div>
+                            </div>   
+                        </div>
+    
+                        <div class="SubCapitulo_Seg">
+                            <div class="wrapper">
+                                <input class = "checkbox" type="checkbox" id="subnext">
+                                <div class="video">
+                                  <video id="subnextvid" src="video_photos/c2.mp4" loop muted autoplay></video>
+                                </div>
+                                <div class="text">
+                                  <span data-text="Next Subchapter"></span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="Capitulos">
+                            <button class="bnC" id="allChaptersBtn">
+                                <span class="bnCspan">All Chapters</span>
+                            </button>
+                        </div>
+    
+                    </div>
+                    <div class="capitulos_display" id="all_display" style="display: none">                   
+
+                        <div id="introbtn">
+                            <button class="bnC" id="intro_all">
+                                <span class="bnCspan">Intro</span>
+                              </button>
+                                
+                        </div>
+                        <div id="chaptsbtn">
+                            <div id = "col1">
+                                <button class="bnC" id="c1_all">
+                                    <span class="bnCspan">Chapter 1</span>
+                                </button>
+                                <button class="bnC" id="c2_all">
+                                    <span class="bnCspan">Chapter 2</span>
+                                </button>
+                                
+                            </div>
+                            <div id="col2">
+                                <button class="bnC" id="c3_all">
+                                    <span class="bnCspan">Chapter 3</span>
+                                </button>  
+                                <button class="bnC" id="c4_all">
+                                    <span class="bnCspan">Chapter 4</span>
+                                </button>
+                            </div>
+                            <div id="col3">
+                                
+                                <button class="bnC" id="c5_all">
+                                    <span class="bnCspan">Chapter 5</span>
+                                </button>
+                                <button class="bnC" id="c6_all">
+                                    <span class="bnCspan">Chapter 6</span>
+                                </button>
+                            </div>
+
+                            <div id="backcapbtn">
+                                <button class="bnC" id="backChapters">
+                                    <span class="bnCspan">Back</span>
+                                </button>
+                        </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div id="Palavras" style="display: none">
+                    <div class="Conteudo_Pal">
+                        <h2>Key Words</h2>
+                                              
+                        <button  class="horizontal" id="key_word_btn1">
+                            <span class="text">Voyager I</span></button>
+                        <button  class="horizontal" id="key_word_btn2">
+                            <span class="text">Black Hole</span></button>
+                        <button  class="horizontal" id="key_word_btn3">
+                            <span class="text">Albert Einstein</span></button>
+                        <button  class="horizontal" id="key_word_btn4">
+                            <span class="text">Gravitational Waves</span></button>
+                        <button  class="horizontal" id="key_word_btn5">
+                            <span class="text">Electromagnetic Spectrum</span></button>
+                        <button  class="horizontal" id="key_word_btn6">
+                            <span class="text">Big Bang</span></button>
+                        <button  class="horizontal" id="key_word_btn7">
+                            <span class="text">DNA</span></button>
+                        <button  class="horizontal" id="key_word_btn8">
+                            <span class="text">Natural Selection</span></button>
+                        <button  class="horizontal" id="key_word_btn9">
+                            <span class="text">NeoCortex</span></button>
+                        <button  class="horizontal" id="key_word_btn10">
+                            <span class="text">Triassic</span></button>
+                        <button  class="horizontal" id="key_word_btn11">
+                            <span class="text">Homo Sapiens</span></button>
+                        <button  class="horizontal" id="key_word_btn12">
+                            <span class="text">Blombos Cave</span></button>
+                        <button  class="horizontal" id="key_word_btn13">
+                            <span class="text">Çatalhöyük</span></button>
+                        <button  class="horizontal" id="key_word_btn14">
+                            <span class="text">Proto-city</span></button>
+                        <button  class="horizontal" id="key_word_btn15">
+                            <span class="text">Ocher</span></button>
+                        <button  class="horizontal" id="key_word_btn16">
+                            <span class="text">Giordano Bruno</span></button>
+                        <button  class="horizontal" id="key_word_btn17">
+                            <span class="text">Christiaan Huygens</span></button>
+                        <button  class="horizontal" id="key_word_btn18">
+                            <span class="text">Textile Merchant Lens</span></button>
+                        <button  class="horizontal" id="key_word_btn19">
+                            <span class="text">Antony van Leeuwenhoek</span></button>
+                        <button  class="horizontal" id="key_word_btn20">
+                            <span class="text">Baruch Spinoza</span></button>
+                        <button  class="horizontal" id="key_word_btn21">
+                            <span class="text">Biodiversity</span></button>
+                        <button  class="horizontal" id="key_word_btn22">
+                            <span class="text">Endangered species</span></button>
+                        <button  class="horizontal" id="key_word_btn23">
+                            <span class="text">Anthropocene</span></button>
+                        <button  class="horizontal" id="key_word_btn24">
+                            <span class="text">Project Breakthrough Starshot</span></button>
+                    </div>                    
+            
+                </div>
+                <div id="Informacoes" style="display: none">
+                    <div id="Conteudo_Info">
+                    
+                        <div class="ci" id="Voyager" style="display: block">
+                            <h3>Voyager I</h3>
+                         
+                            <p>Voyager I is a space probe launched by NASA on September 5, 1977, as part of the Voyager program to study the outer Solar System and interstellar space beyond the Sun's heliosphere. Launched 16 days after its twin, Voyager II, Voyager I has operated for 43 years and 9 months as of June 5, 2021 UTC and still communicates with the Deep Space Network to receive routine commands and to transmit data to Earth. Real-time distance and velocity data is provided by NASA and JPL. At a distance of 152.2 AU (22.8 billion km; 14.1 billion mi) from Earth as of May 31, 2021, it is the most distant man-made object from Earth.</p>
+
+                           
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Voyager_1" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Voyager_1 </a></h5>
+
+                            <h5>Mission Status | NASA: <a class="underline" href="https://voyager.jpl.nasa.gov/mission/status/" target="_blank" rel="noopener noreferrer">https://voyager.jpl.nasa.gov/mission/status/ </a> </h5> 
+                        </div>
+
+                        <div class="ci" id="Black Hole" style="display: none">
+                            <h3>Black Hole</h3>
+                         
+                            <p>A black hole is a place in space where gravity pulls so much that even light can not get out. The gravity is so strong because matter has been squeezed into a tiny space. This can happen when a star is dying.</p>
+
+                            <p>Because no light can get out, people can't see black holes. They are invisible. Space telescopes with special tools can help find black holes. The special tools can see how stars that are very close to black holes act differently than other stars.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-a-black-hole-k4.html" target="_blank" rel="noopener noreferrer">https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-a-black-hole-k4.html  </a></h5>
+                            
+                        </div>
+
+                        <div class="ci" id="Albert Einstein" style="display: none">
+                            <h3>Albert Einstein </h3>
+                         
+                            <p>Albert Einstein, (born March 14, 1879, Ulm, Württemberg, Germany—died April 18, 1955, Princeton, New Jersey, U.S.), German-born physicist who developed the special and general theories of relativity and won the Nobel Prize for Physics in 1921 for his explanation of the photoelectric effect. Einstein is generally considered the most influential physicist of the 20th century.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.britannica.com/biography/Albert-Einstein" target="_blank" rel="noopener noreferrer">https://www.britannica.com/biography/Albert-Einstein </a></h5>
+                        </div>
+
+                        <div class="ci" id="Gravitational Waves" style="display: none">
+                            <h3>Gravitational Waves </h3>
+                         
+                            <p>Gravitational waves are 'ripples' in space-time caused by some of the most violent and energetic processes in the Universe. Albert Einstein predicted the existence of gravitational waves in 1916 in his general theory of relativity. Einstein's mathematics showed that massive accelerating objects (such as neutron stars or black holes orbiting each other) would disrupt space-time in such a way that 'waves' of undulating space-time would propagate in all directions away from the source. These cosmic ripples would travel at the speed of light, carrying with them information about their origins, as well as clues to the nature of gravity itself.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.ligo.caltech.edu/page/what-are-gw" target="_blank" rel="noopener noreferrer">https://www.ligo.caltech.edu/page/what-are-gw </a></h5>
+                        </div>
+
+                        <div class="ci" id="Electromagnetic Spectrum" style="display: none">
+                            <h3>Electromagnetic Spectrum </h3>
+                         
+                            <p>Human eyes can see only a small portion of the range of radiation given off by the objects around us. We call this wide array of radiation the electromagnetic spectrum, and the part we can see “visible light.”</p>
+                            <p>By only seeing visible light, we miss out on the information conveyed by other types of radiation. Other Earth creatures can see some of the spectrum we are blind to. Certain fish, bullfrogs and snakes, for instance, can see infrared radiation, which helps them find prey through murky water or in the dark. Butterflies and some species of birds can see ultraviolet light, which helps them identify certain markings on mates.</p>
+                            <p>When it comes to cosmic objects, key information is revealed by different portions of the electromagnetic spectrum. Telescopes are designed to capture different portions of this spectrum, providing more information than the human eye could detect on its own.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.nasa.gov/content/explore-light" target="_blank" rel="noopener noreferrer">https://www.nasa.gov/content/explore-light  </a></h5>
+                        </div>
+
+                        <div class="ci" id="Big Bang" style="display: none">
+                            <h3>Big Bang </h3>
+                         
+                            <p>The Big Bang theory is the prevailing cosmological model of the observable universe from the earliest known periods through its subsequent large-scale evolution. The model describes how the universe expanded from an initial state of high density and temperature and offers a comprehensive explanation for a broad range of observed phenomena, including the abundance of light elements, the cosmic microwave background (CMB) radiation, and large-scale structure.</p>
+                            <p>Crucially, the theory is compatible with Hubble–Lemaître law — the observation that the farther away galaxies are, the faster they are moving away from Earth. Extrapolating this cosmic expansion backwards in time using the known laws of physics, the theory describes an increasingly concentrated cosmos preceded by a singularity in which space and time lose meaning (typically named "the Big Bang singularity"). Detailed measurements of the expansion rate of the universe place the Big Bang singularity at around 13.8 billion years ago, which is thus considered the age of the universe.</p>
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Big_Bang" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Big_Bang  </a></h5>
+                        </div>
+
+                        <div class="ci" id="DNA" style="display: none">
+                            <h3>DNA</h3>
+                         
+                            <p>DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms. Nearly every cell in a person’s body has the same DNA. Most DNA is located in the cell nucleus (where it is called nuclear DNA), but a small amount of DNA can also be found in the mitochondria (where it is called mitochondrial DNA or mtDNA). Mitochondria are structures within cells that convert the energy from food into a form that cells can use.</p>
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Voyager_1" target="_blank" rel="noopener noreferrer">https://medlineplus.gov/genetics/understanding/basics/dna/  </a></h5>
+                        </div>
+
+                        <div class="ci" id="Natural Selection" style="display: none">
+                            <h3>Natural Selection </h3>
+                         
+                            <p>Natural selection is the process through which populations of living organisms adapt and change. Individuals in a population are naturally variable, meaning that they are all different in some ways. This variation means that some individuals have traits better suited to the environment than others. Individuals with adaptive traits—traits that give them some advantage—are more likely to survive and reproduce. These individuals then pass the adaptive traits on to their offspring. Over time, these advantageous traits become more common in the population. Through this process of natural selection, favorable traits are transmitted through generations.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.nationalgeographic.org/encyclopedia/natural-selection/" target="_blank" rel="noopener noreferrer">https://www.nationalgeographic.org/encyclopedia/natural-selection/ </a></h5>
+                        </div>
+
+                        <div class="ci" id="NeoCortex" style="display: none">
+                            <h3>NeoCortex</h3>
+                         
+                            <p>The neocortex, also called the neopallium, isocortex, or the six-layered cortex, is a set of layers of the mammalian cerebral cortex involved in higher-order brain functions such as sensory perception, cognition, generation of motor commands, spatial reasoning and language. The neocortex is further subdivided into the true isocortex and the proisocortex.</p>
+                            <p>In the human brain, the neocortex is the largest part of the cerebral cortex, which is the outer layer of the cerebrum, with the allocortex making up the rest. The neocortex is made up of six layers, labelled from the outermost inwards, I to VI. Of all the mammals studied to date (including humans), a species of oceanic dolphin known as the long-finned pilot whale has been found to have the most neocortical neurons.</p>
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Neocortex" target="_blank" rel="noopener noreferrer"> https://en.wikipedia.org/wiki/Neocortex </a></h5>
+                        </div>
+
+                        <div class="ci" id="Triassic" style="display: none">
+                            <h3>Triassic</h3>
+                         
+                            <p>The Triassic is a geologic period and system which spans 50.6 million years from the end of the Permian Period 251.902 million years ago (Mya), to the beginning of the Jurassic Period 201.36 Mya. The Triassic is the first and shortest period of the Mesozoic Era. Both the start and end of the period are marked by major extinction events. The Triassic period is subdivided into three epochs: Early Triassic, Middle Triassic and Late Triassic.</p>
+                            <p>The Triassic began in the wake of the Permian–Triassic extinction event, which left the Earth's biosphere impoverished; it was well into the middle of the Triassic before life recovered its former diversity. Therapsids and archosaurs were the chief terrestrial vertebrates during this time. A specialized subgroup of archosaurs, called dinosaurs, first appeared in the Late Triassic but did not become dominant until the succeeding Jurassic Period.</p>
+                            <p>The first true mammals, themselves a specialized subgroup of therapsids, also evolved during this period, as well as the first flying vertebrates, the pterosaurs, who, like the dinosaurs, were a specialized subgroup of archosaurs. The vast supercontinent of Pangaea existed until the mid-Triassic, after which it began to gradually rift into two separate landmasses, Laurasia to the north and Gondwana to the south.</p>
+                            <p>The global climate during the Triassic was mostly hot and dry, with deserts spanning much of Pangaea's interior. However, the climate shifted and became more humid as Pangaea began to drift apart. The end of the period was marked by yet another major mass extinction, the Triassic–Jurassic extinction event, that wiped out many groups and allowed dinosaurs to assume dominance in the Jurassic.</p>
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Triassic" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Triassic</a></h5>
+                            <h5>Triassic Period Facts and Information | National Geographic: <a class="underline" href="https://www.nationalgeographic.com/science/article/triassic" target="_blank" rel="noopener noreferrer">https://www.nationalgeographic.com/science/article/triassic</a> </h5> 
+                        </div>
+
+                        <div class="ci" id="Homo Sapiens" style="display: none">
+                            <h3>Homo Sapiens </h3>
+                         
+                            <p>Humans (Homo sapiens) are the most abundant and widespread species of primates, characterized by bipedality and large complex brains enabling the development of advanced tools, culture and language. Humans are highly social beings and tend to live in large complex social structures composed of many cooperating and competing groups, from families and kinship networks to political states. Social interactions between humans have established a wide variety of values, social norms, and rituals, which bolster human society. Curiosity and the human desire to understand and influence the environment and to explain and manipulate phenomena have motivated humanity's development of science, philosophy, mythology, religion, and other fields of knowledge.</p>
+                            <p>Humans evolved from other hominins in Africa several million years ago. Although some scientists equate humans with all members of the genus Homo, in common usage it generally refers to Homo sapiens, the only extant member. H. sapiens emerged around 300,000 years ago, evolving from Homo erectus and migrating out of Africa, gradually replacing local populations of archaic humans. Early humans were hunter-gatherers, before settling in the Fertile Crescent and other parts of the Old World. Access to food surpluses led to the formation of permanent human settlements and the domestication of animals. As populations became larger and denser, forms of governance developed within and between communities and a number of civilizations rose and fell. Humans have continued to expand, with over 7.8 billion humans occupying almost all regions of the world in 2021.</p>
+
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Human" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Human </a></h5>
+                        </div>
+
+                        <div class="ci" id="Blombos Cave" style="display: none">
+                            <h3>Blombos Cave </h3>
+                         
+                            <p>Blombos Cave is an archaeological site located in Blombos Private Nature Reserve, about 300km east of Cape Town on the Southern Cape coastline, South Africa. The cave contains Middle Stone Age (MSA) deposits currently dated at between c. 100,000 and 70,000 years Before Present (BP), and a Late Stone Age sequence dated at between 2000 and 300 years BP. The cave site was first excavated in 1991 and field work has been conducted there on a regular basis since 1997, and is ongoing.</p>
+                            <p>The excavations at Blombos Cave have yielded important new information on the behavioural evolution of anatomically modern humans. The archaeological record from this cave site has been central in the ongoing debate on the cognitive and cultural origin of early humans and to the current understanding of when and where key behavioural innovations emerged among Homo sapiens in southern Africa during the Late Pleistocene. Archaeological material and faunal remains recovered from the Middle Stone Age phase in Blombos Cave – dated to ca. 100,000–70,000 years BP – are considered to represent greater ecological niche adaptation, a more diverse set of subsistence and procurements strategies, adoption of multi-step technology and manufacture of composite tools, stylistic elaboration, increased economic and social organisation and occurrence of symbolically mediated behaviour.</p>
+
+                            <p>The most informative archaeological material from Blombos Cave includes engraved ochre, engraved bone ochre processing kits, marine shell beads, refined bone and stone tools and a broad range of terrestrial and marine faunal remains, including shellfish, birds, tortoise and ostrich egg shell and mammals of various sizes. These findings, together with subsequent re-analysis and excavation of other Middle Stone Age sites in southern Africa, have resulted in a paradigm shift with regard to the understanding of the timing and location of the development of modern human behaviour.</p>
+
+                            <p>On 29 May 2015 Heritage Western Cape formally protected the site as a provincial heritage site. Cross-hatching done in ochre on a stone fragment found at Blombos Cave is believed to be the earliest known drawing done by a human in the world.</p>
+
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Blombos_Cave" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Blombos_Cave</a></h5>
+                            <h5>Blombos Cave | The Conversation : <a class="underline" href="https://theconversation.com/south-africas-blombos-cave-is-home-to-the-earliest-drawing-by-a-human-103017" target="_blank" rel="noopener noreferrer">https://theconversation.com/south-africas-blombos-cave-is-home-to-the-earliest-drawing-by-a-human-103017  </a> </h5> 
+                        </div>
+
+                        <div class="ci" id="Çatalhöyük" style="display: none">
+                            <h3>Çatalhöyük </h3>
+                         
+                            <p>Çatalhöyük was a very large Neolithic and Chalcolithic proto-city settlement in southern Anatolia, which existed from approximately 7100 BC to 5700 BC, and flourished around 7000 BC. In July 2012, it was inscribed as a UNESCO World Heritage Site.</p>
+                            <p>Çatalhöyük is located overlooking the Konya Plain, southeast of the present-day city of Konya (ancient Iconium) in Turkey, approximately 140 km (87 mi) from the twin-coned volcano of Mount Hasan. The eastern settlement forms a mound which would have risen about 20 m (66 ft) above the plain at the time of the latest Neolithic occupation. There is also a smaller settlement mound to the west and a Byzantine settlement a few hundred meters to the east. The prehistoric mound settlements were abandoned before the Bronze Age. A channel of the Çarşamba River once flowed between the two mounds, and the settlement was built on alluvial clay which may have been favorable for early agriculture.</p>
+
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk  </a></h5>
+                        </div>
+
+                        <div class="ci" id="Proto-city" style="display: none">
+                            <h3>Proto-city </h3>
+                         
+                            <p>A proto-city, or a proto-town, is a large village or town of the Neolithic such as Jericho and Çatalhöyük, and also any prehistoric settlement which has both rural and urban features. A proto-city is distinguished from a true city in that it lacks planning and centralized rule. For example, Jericho evidently had a class system, but no roads, while Çatalhöyük apparently lacked social stratification. This is what distinguishes them from the first city-states of the early Mesopotamian cities in the 4th millennium B.C. </p>
+   
+                            <p>Prehistoric Egypt and the Ubaid period of Sumer featured what some call proto-cities. The break from these later mentioned settlements and urban settlements is the emergence of Eridu, the first Sumerian city, in the Uruk period around 4000 BC. A European example of this would be the Cucuteni-Trypillian culture of eastern Europe and north of the Black Sea, and which dates back to the fourth millennium BC. </p>
+
+
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Proto-city" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Proto-city  </a></h5>
+                        </div>
+
+                        <div class="ci" id="Ocher" style="display: none">
+                            <h3>Ocher </h3>
+                         
+                            <p>Ocher is a natural clay earth pigment which is a mixture of ferric oxide and varying amounts of clay and sand. It ranges in colour from yellow to deep orange or brown. It is also the name of the colours produced by this pigment, especially a light brownish-yellow. A variant of ochre containing a large amount of hematite, or dehydrated iron oxide, has a reddish tint known as "red ochre" (or, in some dialects, ruddle).</p>
+                            <p>The word ochre also describes clays coloured with iron oxide derived during the extraction of tin and copper.</p>
+
+   
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Ochre" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Ochre  </a></h5>
+                        </div>
+
+                        <div class="ci" id="Giordano Bruno" style="display: none">
+                            <h3>Giordano Bruno</h3>
+                         
+                            <p>Giordano Bruno, original name Filippo Bruno, byname Il Nolano, (born 1548, Nola, near Naples [Italy]—died February 17, 1600, Rome), Italian philosopher, astronomer, mathematician, and occultist whose theories anticipated modern science. The most notable of these were his theories of the infinite universe and the multiplicity of worlds, in which he rejected the traditional geocentric (Earth-centred) astronomy and intuitively went beyond the Copernican heliocentric (Sun-centred) theory, which still maintained a finite universe with a sphere of fixed stars. Bruno is, perhaps, chiefly remembered for the tragic death he suffered at the stake because of the tenacity with which he maintained his unorthodox ideas at a time when both the Roman Catholic and Reformed churches were reaffirming rigid Aristotelian and Scholastic principles in their struggle for the evangelization of Europe.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.britannica.com/biography/Giordano-Bruno" target="_blank" rel="noopener noreferrer">https://www.britannica.com/biography/Giordano-Bruno  </a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Christiaan Huygens" style="display: none">
+                            <h3>Christiaan Huygens</h3>
+                         
+                            <p>Christiaan Huygens, also spelled Christian Huyghens, (born April 14, 1629, The Hague—died July 8, 1695, The Hague), Dutch mathematician, astronomer, and physicist, who founded the wave theory of light, discovered the true shape of the rings of Saturn, and made original contributions to the science of dynamics—the study of the action of forces on bodies.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.britannica.com/biography/Christiaan-Huygens" target="_blank" rel="noopener noreferrer">https://www.britannica.com/biography/Christiaan-Huygens</a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Textile Merchant Lens" style="display: none">
+                            <h3>Textile Merchant Lens </h3>
+                         
+                            <p>Antony Van Leeuwenhoek didn’t set out to identify microbes. Instead, he was trying to assess the quality of thread. He developed a method for making lenses by heating thin filaments of glass to make tiny spheres. His lenses were of such high quality he saw things no one else could. </p>
+   
+                            <h5>Source: <a class="underline" href="https://theconversation.com/the-17th-century-cloth-merchant-who-discovered-the-vast-realm-of-tiny-microbes-an-appreciation-of-antonie-van-leeuwenhoek-158177" target="_blank" rel="noopener noreferrer">https://theconversation.com/the-17th-century-cloth-merchant-who-discovered-the-vast-realm-of-tiny-microbes-an-appreciation-of-antonie-van-leeuwenhoek-158177</a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Antony van Leeuwenhoek" style="display: none">
+                            <h3>Antony van Leeuwenhoek </h3>
+                         
+                            <p>Antony van Leeuwenhoek was an unlikely scientist. A tradesman of Delft, Holland, he came from a family of tradesmen, had no fortune, received no higher education or university degrees, and knew no languages other than his native Dutch. This would have been enough to exclude him from the scientific community of his time completely. Yet with skill, diligence, an endless curiosity, and an open mind free of the scientific dogma of his day, Leeuwenhoek succeeded in making some of the most important discoveries in the history of biology. It was he who discovered bacteria, free-living and parasitic microscopic protists, sperm cells, blood cells, microscopic nematodes and rotifers, and much more. His researches, which were widely circulated, opened up an entire world of microscopic life to the awareness of scientists. </p>
+   
+                            <h5>Source: <a class="underline" href="https://ucmp.berkeley.edu/history/leeuwenhoek.html" target="_blank" rel="noopener noreferrer">https://ucmp.berkeley.edu/history/leeuwenhoek.html </a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Baruch Spinoza" style="display: none">
+                            <h3>Baruch Spinoza </h3>
+                         
+                            <p>Baruch Spinoza is one of the most important philosophers—and certainly the most radical—of the early modern period. His thought combines a commitment to a number of Cartesian metaphysical and epistemological principles with elements from ancient Stoicism, Hobbes, and medieval Jewish rationalism into a nonetheless highly original system. His extremely naturalistic views on God, the world, the human being and knowledge serve to ground a moral philosophy centered on the control of the passions leading to virtue and happiness. They also lay the foundations for a strongly democratic political thought and a deep critique of the pretensions of Scripture and sectarian religion. Of all the philosophers of the seventeenth century, Spinoza is among the most relevant today. </p>
+   
+                            <h5>Source: <a class="underline" href="https://plato.stanford.edu/entries/spinoza/" target="_blank" rel="noopener noreferrer">https://plato.stanford.edu/entries/spinoza/ </a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Biodiversity" style="display: none">
+                            <h3>Biodiversity</h3>
+                         
+                            <p>Biodiversity refers to the variety of living species on Earth, including plants, animals, bacteria, and fungi. While Earth’s biodiversity is so rich that many species have yet to be discovered, many species are being threatened with extinction due to human activities, putting the Earth’s magnificent biodiversity at risk.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.nationalgeographic.org/encyclopedia/biodiversity/" target="_blank" rel="noopener noreferrer">https://www.nationalgeographic.org/encyclopedia/biodiversity/ </a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Endangered species" style="display: none">
+                            <h3>Endangered species</h3>
+                         
+                            <p>An endangered species is a type of organism that is threatened by extinction. Species become endangered for two main reasons: loss of habitat and loss of genetic variation.</p>
+   
+                            <h5>Source: <a class="underline" href="https://www.nationalgeographic.org/encyclopedia/endangered-species/" target="_blank" rel="noopener noreferrer">https://www.nationalgeographic.org/encyclopedia/endangered-species/</a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Anthropocene" style="display: none">
+                            <h3>Anthropocene</h3>
+                         
+                            <p>-Anthropo (greek word for human)</p>
+                            <p>-Cene (greek word for recent)</p>   
+                            <p>The Anthropocene Epoch is an unofficial unit of geologic time, used to describe the most recent period in Earth’s history when human activity started to have a significant impact on the planet’s climate and ecosystems.
+                            </p>
+   
+                            <h5>Source: <a class="underline" href="https://www.nationalgeographic.org/encyclopedia/anthropocene/" target="_blank" rel="noopener noreferrer">https://www.nationalgeographic.org/encyclopedia/anthropocene/  </a></h5>
+                             
+                        </div>
+
+                        <div class="ci" id="Project Breakthrough Starshot" style="display: none">
+                            <h3>Project Breakthrough Starshot </h3>
+                         
+                            <p>Breakthrough Starshot is a research and engineering project by the Breakthrough Initiatives to develop a proof-of-concept fleet of light sail interstellar probes named Starchip, to be capable of making the journey to the Alpha Centauri star system 4.37 light-years away.</p>
+                            
+
+                            <h5>Source: <a class="underline" href="https://en.wikipedia.org/wiki/Breakthrough_Starshot" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Breakthrough_Starshot </a></h5>
+                             
+                        </div>                           
+
+                    </div>
+                </div>
+                <div id="Texto" style="display: none">
+                    <div id="Conteudo_Text">
+                        <div id="Indice">
+                            <h3>Index</h3>
+                            <h4 class =" cap_t" id="introduction">Introduction</h4>
+                            <h4 class =" cap_t" id="TheShipOfImagination">The Ship of Imagination<button id="TheShipOfImaginationBtn" type="button">[3:32]</button></h4>                        
+                            <h4 class =" cap_t" id="CosmicCalendar">Cosmic Calendar<button id="CosmicCalendarBtn" type="button">[9:47]</button></h4>
+                            <h4 class =" cap_st"id="OriginofLife">Origin of Life <button id="OriginofLifeBtn" type="button">[10:11]</button></h4>
+                            <h4 class =" cap_st"id=" FirstMammals">First Mammals<button id="FirstMammalsBtn" type="button">[11:26]</button></h4>
+                            <h4 class =" cap_st" id="HumanEvolution">Human Evolution<button id="HumanEvolutionBtn" type="button">[12:23]</button></h4>
+                            <h4 class =" cap_sst"id="BlombosCave">Blombos Cave<button id="BlombosCaveBtn" type="button">[16:45]</button></h4>
+                            <h4 class =" cap_sst"id="BeginningOfAgriculture&DomesticationOfAnimals">Beginning of Agriculture & Domestication of Animals<button id="BeginningOfAgriculture" type="button">[18:15]</button></h4>
+                            <h4 class =" cap_sst" id="Çatalhöyük">Çatalhöyük<button id="ÇatalhöyükBtn" type="button">[19:22]</button></h4>
+                            <h4 class =" cap_t" id="GoldenAgeOfScienceAndArt">Golden Age of Science and Art<button id="GoldenAgeOfScienceAndArtBtn" type="button">[23:43]</button></h4>
+                            <h4 class =" cap_st"id="TheExistenceOfOtherWorlds">The existence of other worlds<button id="TheExistenceOfOtherWorlds" type="button">[24:37]</button></h4>
+                            <h4 class =" cap_t"id="PlantAndAnimalKingdoms">Plant and Animal Kingdoms<button id="PlantAndAnimalKingdomsBtn" type="button">[31:32]</button></h4>
+                            <h4 class =" cap_t" id="HallsOfExtintion">Halls of Extintion<button id="HallsOfExtintionBtn" type="button">[34:29]</button></h4>
+                            <h4 class =" cap_t" id="TheFuture">The Future<button id="TheFutureBtn" type="button">[37:20]</button></h4>
+                       
+                        </div>
+                        <div id="Texto_Caps">
+
+                            <div id="c0">
+
+                                <h4 class =" cap_t" id="introductiontxt">Introduction</h4>
+                            
+                                <p>We were hunters and foragers.  The frontier was everywhere.  We were bounded only by the earth and the ocean and the sky.  The open road still softly calls like a nearly forgotten song of childhood.  For all our failings, despite our limitations and fallibilities, we humans are capable of greatness.  How far will our nomadic species have wandered by the end of the next century?  And the next millennium?  Welcome back to the shores of the cosmic ocean...  An immensity of space and time, a vastness still mostly uncharted.  We are bound for the possible worlds revealed by science.  We will take a ride on the underground worldwide network that no one knew was there.  I am going to tell you a first contact story that is true.  We will meet some of the most courageous people who ever lived.  And we are going to venture into the future we can still have, to the homes of our distant descendants among the starts.  Science can carry us across that vastness.  But without imagination, we go nowhere.  
+
+                                </p>
+                            </div>
+                            <div id="c1">
+                                <h4 class ="cap_t" id="TheShipOfImaginationtxt">The Ship of Imagination</h4>                        
+                            
+                                <p>
+                                    Our Ship of the Imagination is propelled by twin engines of skepticism and wonder.  It is guided by the simple set of rules that define science and make it so powerful.  Test ideas by experiment and observation.  Build on those ideas that pass the test.  Reject the ones that fail.  Follow the evidence wherever it leads.  And question everything.  Take these rules to heart, and the cosmos is yours.  Come with me...  Our Ship of the Imagination can take us anywhere in space and time.  The cosmos is right outside our front window.  If you want to see the past, look down.  And if you want to see the future, look up.  On this voyage, we are bound for a distant galaxy.  And we will discover how we as a species became explorers of the cosmos.  There. There she is.  NASA's Voyager 1.  Launched in 1977, she is the most distant object built by human hands.  She has done some hard traveling since our last encounter, logged another billion and a half miles.  Voyager's making for other parts of our Milky Way, but we have another, far more distant destination.  The cosmic ocean is made of space and time.  You cannot move in space without also moving in time.  Our voyage will take us a long way from home, a little more than a billion light-years.  We are also traveling a billion years into the past, to an event so violent it will even shatter time.  Now, we are getting close to our destination.  This is what we came for.  These two black holes were born from the collapse of a pair of massive stars.  And they have been doing a gravitational tango ever since for millions of years.  We are here for the climax.  When those two collide, they will set off a space-time tsunami that will stretch and compress space in all directions.  And it will slow down time itself, before speeding it up and slowing it down again.  Gravitational...  and it will slow down time itself...  Set off a space-time tsunami...  Stretch and compress space in all directions a billion light-years away.  What does an event that took place more than a billion light-years away have to do with us?  Albert Einstein was the first to understand that matter could send ripples across space-time.  He imagined that catastrophic explosions of matter should create something much bigger than ripples, great waves, gravitational waves.  You are seeing and hearing me right now, on whatever device you have, because we figured out a way to manipulate the electromagnetic spectrum.  If we can learn to surf those gravitational waves the way we know how to ride the electromagnetic ones, who knows?  It is as impossible to foresee as our world was to the scientists who experimented with electricity back in the 19th century.  Cosmologists predicted the existence of black holes.  Gravitational waves are the first direct evidence that black holes are real.  But they may also provide a new way of knowing and exploring the cosmos.  We can add it to the other senses that science has devised to penetrate the great dark ocean, all the kinds of light we use, Gamma ray, X-ray, ultraviolet, infrared, microwave, radio wave and visible light.  This newest way to search the cosmos could help us to know one day what is happening inside those black holes, and the other hidden places that make up most of the universe.  What if we could detect the gravitational waves that were caused by the first moment of creation, the birth of the cosmos?  What if we could extend our vision to see the whole sweep of 14 billion years of cosmic evolution?  So, how did we get so smart?  We know something about the evolution of our species, but how did the human mind evolve?  Where did that crazy ambition to climb the ladder to the stars come from?  How did we become a way for the universe to know itself?  It started over there. 
+                                </p>
+                            </div>
+                            <div id="c2">
+                                <h4 class ="cap_t" id="CosmicCalendartxt">Cosmic Calendar</h4>
+                            
+                                <p>
+                                    Is a way for us to grasp the vastness of time.  We have taken all of time, from the birth of the universe to this very moment and compressed it into a single calendar year.  On this scale, every month represents a little more than a billion years.  Every day represents nearly 40 million years.  </p>
+                                
+                                <p>  Our own story begins with all the other life on our little world.  Every living thing on Earth is descended from a single origin.  It happened in the deep ocean darkness on September 15, about four billion years ago.  Within this tiny single-celled organism was a kind of chemical ladder, the DNA double helix.  Star stuff...  Oxygen, carbon, nitrogen...  Elements cooked in the hearts of distant stars, combined with hydrogen from the Big Bang to become alive on this little world.  Through random changes, mutations in the genes, some of which led to more successful life-forms, what we call evolution by natural selection.  The ladder grew, adding more and more rungs.  It took another three billion years for life to evolve the complexity of the plants and animals that you could see with the naked eye.</p>
+                                
+                                <p>If the Cosmic Calendar had holidays, surely December 26 would be one of them.  Some time on this day, about 200 million years ago, the first mammals evolved.  They brought a new feature to life on Earth:  The neocortex.  Back in the Triassic, the odds were against her kind, but the dinosaurs that terrorized the mammals went extinct.  It was the evolution of the neocortex in small, furtive creatures such as this one, that enabled their descendants to take over the planet.  Mammals brought something else that was new.  They suckled their young.  They nurtured them.  And there was love.  Mother's Day on the Cosmic Calendar.  </p>
+                                
+                                <p>Evolution by natural selection means that those living things able to better adapt to their environment are more likely to survive and leave offspring.  Intelligence can be a huge selective advantage.  The fate of this planet was changed forever by an event involving just 13 atoms.  How small is 13 atoms?  It is a quadrillionth the size of a grain of salt.  A mutation occurred in the DNA of just one of our ancestors.  Every source of self-esteem, everything we have learned, and built, might come down to nothing more than this.  One base pair of a single gene.  Just a single rung programmed the neocortex to grow larger still and fold more deeply.  Maybe it was a random zap from a cosmic ray, or a simple error in transmission from one cell to another.  Whatever it was, it led to a change in our species that would ultimately affect every other species of life on Earth.  It happened late on New Year's Eve on this.  Cosmic Calendar of ours.  To think that, for good or evil, our ability to feel loyalty and concern for increasingly larger groups, our obsession with certain belief systems, our capacity to imagine the future, our power to transform the world and to search the cosmos for answers...  The very name we gave to our own species, homo sapiens, Latin for "wise persons" all of it comes down to nothing more than a single rung on our tiny DNA ladder to the stars.  For much of the last hour on the Cosmic Calendar, for all but the last minute, our ancestors were hunters and gatherers, living in small bands.  You know, when people just shrug and say, “chalk it up to human nature," it puzzles me.  They are usually talking about our greed, our arrogance, our violence.  But we have been human for at least a couple of hundred thousand years.  For most of that time we were not that way at all.  How do we know?  From the accounts of explorers and anthropologists encountering surviving hunter-gatherer societies across four centuries.  There are, of course, exceptions, especially in the circumstances of extreme scarcity.  But the overwhelming consensus paints a picture of humans who lived in relative harmony with each other and the environment.  We shared the little we had because we knew that our survival depended on the group.  We did not prize wealth beyond our needs because possessions would just weigh us down as we wandered.  We were different from our non-human primate ancestors with their alpha-males bullying their way to dominance.  And where was God?  Everywhere.  In the rocks and in the rivers, in the trees, in the birds and every living thing.  And that was human nature for a couple of hundred thousand years.  I am standing on the southern tip of Africa and imagining what it was like some time in the last hundreds of thousands of years.  Back then, Africa was home to all the world's homo sapiens...  All 10,000 of them.  If you were an extra-terrestrial on a survey mission, you might have thought we were an endangered species.  Someday soon there will be ten billion of us.  What happened?  How did we become the globe-girdling, space-traveling species that we are today?</p>
+
+                                    <p>Welcome to the first laboratory on Earth.  We are in Blombos Cave where the evolution of the mind made a great leap.  Our ancestors were conducting chemistry experiments here with mineral rich in iron, ocher.  They used it to decorate objects with bits of red colour, but it may have also had other uses, to preserve animal hides or as a medicine, or to sharpen their tools, or maybe as an insect repellent.  And they engraved the ocher with symbols.  Something completely new on the planet Earth, art.  Not to be eaten.  Not to provide shelter.  But to symbolize something...  Or just to be.  It looks a little bit like a ladder, or a double helix.  Whatever it was supposed to be, it is the earliest remnant we have of human culture.  We had found a way to leave behind something distinctly human.  A means to communicate, however enigmatically, to you and me 100,000 years away.  A great power was discovered here in Blombos Cave. </p>
+                                    <p> At 25 cosmic seconds-to-midnight, between 10,000 and 12,000 years ago, humans discovered another great power.  Instead of foraging for food, we learned how to grow it in the earth.  This changed everything.  Our ancestors did something else they had never done before.  They invented new tools, technology, to plant and pull food out of the earth.  They settled down and moved indoors.  Our relationship to nature, and to one another, would never be the same.  This agricultural revolution, the domestication of plants and animals, is the mother of all revolutions because all others trace back to it.  Its consequences reach far beyond even our own moment in time.  Like most revolutions, this one brought change that was both great, and horrifying.</p>
+
+                                    <p>  There was a new concept in the world, "Home."  A specific place on the planet where your ancestors, and you, were born and lived.  And over time these settlements grew larger, until about 20 cosmic seconds ago or around 7000 BCE.  Welcome to Çatalhöyük, a community on the Anatolian plain.  It is about 9,000 years ago and everyone has settled in for the evening.  Tonight, roughly the same number of people who once populated all of Africa are living together in this proto city.  The city is such a new idea, they have not invented the street yet, or the window.  So, the only way you can get into your apartment is to walk along the rooftops till you arrive at the opening to your dwelling.  Çatalhöyük lacked something much more significant than streets and windows.  There is no palace here.  The bitter price that the invention of agriculture cost human society had yet to be paid.  Here, there was no dominance of the few over the many.  There was no 1% attaining lavish wealth, while most everyone else merely subsisted.  Forensic analysis of the women, men, and children who lived here show a remarkable similarity in diet.  They still cherished the hunter-gatherer ethos of sharing.  Çatalhöyük was egalitarian.  The weakest ate the same food that the strongest did, and everyone lived in the same kind of home.  But, man, it was anything but drab.  Come on. I will show you.  This was a typical apartment in one of the first cities, Çatalhöyük, in what is now Turkey, as it looked about 9,000 years ago.  They were a lot like us.  This bit of volcanic glass, called obsidian, made an excellent mirror.  If we could only find a way to see all the things that were once reflected here.  This apartment was home for an extended family of seven to ten people.  Every apartment had a similar floor plan.  Bedroom. Living room. Kitchen.  Plaster auroch head.  The people of Çatalhöyük had a passion for decorating.  Apartments were richly appointed with the teeth and bones and skins of animals.  The ocher that our ancestors picked up in Africa, about 100,000 years before, was now the medium of choice for the interior decorators of Çatalhöyük.  And the red ocher had yet another profound application.  They used it to create an entirely new art form:  The map.  For the first time ever, humans created a two-dimensional representation of their location in space and time.  "This is where my home is in relation to the volcano."  And with a few magical strokes, the artist sent a message across 9,000 years...  "I was here when the volcano awakened."  
+                                </p>
+                            </div>
+                            <div id="c3">
+                                
+                               
+                                <h4 class ="cap_t" id="GoldenAgeOfScienceAndArttxt">Golden Age of Science and Art</h4>
+                                
+                                <p>The experiment at Çatalhöyük was a success, and within a few thousand years there were cities everywhere.  When different kinds of people congregate in a single place, ideas are exchanged, and new possibilities arise.  The city is a kind of brain, creating and processing new ideas.  Here, in the city of Amsterdam, in the 17th century, citizens of the old and new worlds mingled as they never had before, and there was an unprecedented freedom of thought.  These conditions produced a golden age of science and art.  In Italy, Giordano Bruno had proclaimed the existence of other worlds.</p>
+
+                                <p>For this he had been made to suffer.  But a mere 50 years later in Holland, the astronomer Christiaan Huygens, who held the same belief, was showered with honours.  Light was the central theme of the age:  The enlightenment of human curiosity set free, and the light shed by Europe's first look at the once hidden realms of the planet.  The light that permeated the paintings of the time, particularly the work of Vermeer.  And light as an object of scientific inquiry.  For generations, textile merchants had used a lens to examine the thread count of finely stitched fabrics.  In the Amsterdam of that time, there lived three men whose passion for light inspired them to use that ancient device in a completely new way.  They aimed the textile merchants' lens at objects no one had ever thought to examine closely before.  It became a window, an aperture for finding and exploring new worlds.  Antonie Van Leeuwenhoek used a single lens to reveal the teeming microcosm in a drop of water.  His friend, Christiaan Huygens used two lenses to bring the stars, planets, and moons close enough to reveal their features.  Huygens became the first to see that Saturn's rings did not touch the planet, and the first to understand what they really were.  He also discovered Saturn's largest moon, Titan.  Huygens, like Bruno, believed that the stars were other suns, orbited by their own systems of planets and moons.  But why was there no hint of those other worlds and their living things in the sacred books?  Whatever disquiet this contradiction may have stirred in the hearts and minds of the leaders of the Enlightenment, there was only one man who dared to address it head-on.  He was another wizard of light.  Baruch Spinoza had been a member of the Jewish congregation of Amsterdam through his teenage years.  But in his early 20s, he began to speak publicly of a new vision of God.  Spinoza's God was the physical laws of the universe.  His sacred text, the book of nature.  The Jews of Amsterdam were mostly refugees from the vicious Inquisitions in Spain and Portugal, where so many of them had been tortured and murdered.  Amsterdam had offered the Jews a refuge, and they must have seen Spinoza's radical ideas as a threat to their hard-won security in Holland.  They excommunicated the young rebel and decreed that he must be forever shunned.  Spinoza accepted their punishment with dignity, but without a trace of submission.  He moved nearby to The Hague.  Where he went even further, daring to write that the Bible was not dictated by God, but written by human beings.  Spinoza wrote:  "Do not look for God in miracles."  Miracles are violations of the laws of nature.  "God is best apprehended in the study of those laws."  No one had ever said these things aloud before.  Spinoza knew that he was testing the limits of free thought, even for Holland.  To him, an official state religion was more than spiritual coercion of the individual.  Spinoza regarded the miraculous events of the major religious traditions as organized superstition.  In his view, magical thinking posed a danger to the future citizens of a rational, free society.  There could be no such thing as democracy without the separation of church and state.  He wrote a book that introduced the ideas at the heart of the American and many another revolution.  Then, as now, there were those who were threatened by this view of God.  Spinoza continued to write and speak about his revolutionary view of God, always wearing the slashed cape as a badge of honor.  He died at 44, possibly from inhaling particles of dust during his years of grinding lenses for microscopes and telescopes.  250 years later, another man with a passion for light made a pilgrimage to the humble workroom that had been preserved as a testament to the vast influence of.  Spinoza's philosophy.  This man, world famous for finding a new law of nature, was often asked if he believed in God.  Albert Einstein replied:  "I believe in Spinoza's God, who reveals himself in the harmony of all that exists."  Our understanding of nature's laws has advanced far beyond.  Spinoza's, and even Einstein's wildest dreams.  But there is one law of nature we cannot seem to grasp.  Inscribed in the book of nature is a parable about an ancient alliance between two kingdoms.  And those who would tear it apart.  Long ago, there were two kingdoms.  An alliance was formed between them, one that would bring them both riches beyond measure.  A partnership lasting more than a 100 million years.  And then a new kind of being evolved in one of the two kingdoms.  Its descendants plundered the riches and violated the alliance.  In their arrogance, they became a mortal danger to both kingdoms and to themselves.  This parable is true.  It is the story of two of the half dozen realms of life on Earth, the plant and animal kingdoms.  </p>
+                            </div>
+                            <div id="c4">
+                                
+                                <h4 class ="cap_t"id="PlantAndAnimalKingdomstxt">Plant and Animal Kingdoms</h4>
+                            
+                                <p>
+                                    It is not easy being green.  Sex is challenging when you are stuck in one place.  There is no dating.  You just sit there and cast your seed to the winds.  Literally.  You just wait for the wind to blow.  If you get lucky, some of your pollen will be carried away and land on the sexual reproductive part of another plant.  The plants played this hit-or-miss game of chance for a couple of hundred million years, until insects evolved to play cupid.  What resulted was one of the great co-evolution marriages in the history of life.  The insect would visit a flower for a dinner of protein-rich pollen.  Inevitably, some of the pollen would stick to the body of the insect.  The insect would visit another flower, bringing along the leftovers on its body.  That pollen fertilized the next flower, allowing it to reproduce.  It was a win-win deal for both the flowers and the insects, causing a series of delightful evolutionary developments.  A new plant arose that produced sugary nectar in addition to the pollen.  Now, the insects came not just for their basic meal of pollen, but also for dessert.  The insects got chubbier, evolved furry bodies and even little pouches on their legs to snag more pollen on their daily rounds in the flowers.  Now there were bees.  This was a bonus for yet another species of the animal kingdom...  Us.  We are indebted to the bees and their fellow pollinators for something even more vital to our survival.  Every third bite of food you take-and this is even true for those of us who are omnivores, was made possible by them.  35% of the world's crops depend on their cooperation.  The plants eat starlight...  And we, and the animals, we eat plants.  And they do not just increase the quantity of available food.  We owe them for much of the biodiversity that has made our food supply so dependable.  But we are working them to death.  And for the first time ever, many kinds of bees are on the endangered species list.  I think you know where this is headed. 
+                                </p>
+                            </div>
+                            <div id="c5">
+                               
+                                <h4 class =" cap_t" id="HallsOfExtintiontxt">Halls of Extintion</h4>
+                                <p>
+                                    The blessing and the curse of the invention of agriculture has brought us here, to the Halls of Extinction.  A memorial to all the living things lost in the mass extinction events in Earth's history.  It is a monument to the broken branches on the tree of life.  Five times in the history of life, cataclysmic geological, and astronomical events, have threatened to extinguish life itself.  The sixth one is different.  The last time we were here together this hallway had no name.  Why?  Because back then a scientific consensus had yet to be reached that we were in the midst of a mass extinction event.  That is changed.  Now, this hallway has a name.  It is ours.  The Anthropocene.  "Anthropo" from the Greek word for "human" and "Cene."  the Greek word for "recent."  These are the species we hunted to extinction back when we were wanderers.  Including our own cousins, the Neanderthals.  What is it about us, as a species, that wherever we go, we bring death?  Beyond here lies the future.  Even now it is not too late to keep this corridor from lengthening.  If we fail...  But if we succeed...  Come with me.  
+                                </p>
+                            </div>
+                            <div id="c6">
+                                
+                                <h4 class =" cap_t" id="TheFuturetxt">The Future</h4>
+                                <p>In a possible future only decades away, project Starshot, a flotilla of 1,000 spacecraft, will depart from Earth.  This part of the Atacama Desert west of the Andes Mountains, is so dry that it has not rained in recorded history.  And that is great for us because we are going to need the clearest of skies.  There were no witnesses when the first life left the water for the land.  There was nobody to file a report when the first birds took to the skies.  But this is one great leap that will be documented in every conceivable way.  The whole world is watching.  We are, after all, sending our first craft directly to the planets of another sun: The Alpha Centauri system.  These are the ships that will carry our senses there.  These are interstellar sailing ships propelled by light.  Their hulls weigh but a gram, and they are no larger than a pea, and yet they are equipped with all that NASA's Voyagers have and more.  When the first light blasts forth from this phased array of lasers, the spacecraft will accelerate from zero to 20% of the speed of light in mere minutes.  Inside each nanocraft is everything needed to perform the preliminary reconnaissance of the worlds of another star and return that visual and scientific information back to Earth.  Space is mostly empty, but there are tiny dust particles that could wreak havoc if they were to collide with nanocraft traveling at such high speeds.  That is one of the reasons we need to send so many of them.  Voyager 1 is traveling at 38,000 miles per hour.  It left home more than 40 years ago.  It will take these nanocraft only four days to overtake her.  That is pretty fast, but still only 20% of the speed of light.  Proxima Centauri is four light-years away.  That is a 20-year one-way trip.  Orbiting Proxima Centauri, there is a world in the habitable zone where we think life might flourish.  Our robotic emissaries will send accounts from these new worlds.  Their messages will race back to us on radio waves at the speed of light.  They will take four years to reach us: 20 years one-way, four years back.  That is a 24-year round-trip.  Many of you will be there then to read and to write those new pages in the book of nature, and to chart our future course of wandering...  No longer bounded by the earth, the ocean, or the sky. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="main.js"></script>
+        </div>  
+    </body>
+</html>
